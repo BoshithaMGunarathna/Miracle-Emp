@@ -26,30 +26,39 @@ import { sortData, filterData, isThisWeek } from "@/utils/date-utils"
 
 // Simulated data
 const employees = [
-  { id: 2, name: "John Doe" },
-  { id: 3, name: "Jane Smith" },
-  { id: 4, name: "Mike Johnson" },
-  { id: 5, name: "Finance Manager" },
-]
+  { id: 1, name: "Pasan Dulashith" },
+  { id: 2, name: "Boshitha Gunarathna" },
+  { id: 3, name: "Dulan Siriwardana" },
+  { id: 4, name: "Amalka Heshini" },
+  { id: 5, name: "Meleena Meleena" },
+];
+
 
 const initialTasks = [
   {
     id: 1,
     title: "Update Employee Database",
     description: "Migrate employee records to new system",
-    assignedTo: 2,
-    assignedToName: "John Doe",
+    assignedTo: 1,
+    assignedToName: "Pasan Dulashith",
     startDate: "2024-01-15",
     deadline: "2024-01-30",
     status: "in-progress",
-    comments: [{ id: 1, author: "Admin", text: "Please prioritize this task", date: "2024-01-16" }],
+    comments: [
+      {
+        id: 1,
+        author: "Admin",
+        text: "Please prioritize this task",
+        date: "2024-01-16",
+      },
+    ],
   },
   {
     id: 2,
     title: "Prepare Monthly Report",
     description: "Generate and review monthly performance report",
-    assignedTo: 3,
-    assignedToName: "Jane Smith",
+    assignedTo: 2,
+    assignedToName: "Boshitha Gunarathna",
     startDate: "2024-01-20",
     deadline: "2024-01-25",
     status: "pending",
@@ -60,13 +69,14 @@ const initialTasks = [
     title: "Process Payroll",
     description: "Process monthly payroll for all employees",
     assignedTo: 5,
-    assignedToName: "Finance Manager",
+    assignedToName: "Meleena Meleena",
     startDate: "2024-01-25",
     deadline: "2024-01-31",
     status: "pending",
     comments: [],
   },
-]
+];
+
 
 export default function TaskManagement() {
   const [tasks, setTasks] = useState(initialTasks)
