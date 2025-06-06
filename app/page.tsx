@@ -15,6 +15,7 @@ const users = [
   { id: 2, email: "john@company.com", password: "user123", role: "user", name: "John Doe" },
   { id: 3, email: "jane@company.com", password: "user123", role: "user", name: "Jane Smith" },
   { id: 4, email: "mike@company.com", password: "user123", role: "user", name: "Mike Johnson" },
+  { id: 5, email: "finance@company.com", password: "finance123", role: "finance", name: "Finance Manager" },
 ]
 
 export default function LoginPage() {
@@ -31,6 +32,8 @@ export default function LoginPage() {
       localStorage.setItem("currentUser", JSON.stringify(user))
       if (user.role === "admin") {
         router.push("/admin")
+      } else if (user.role === "finance") {
+        router.push("/finance")
       } else {
         router.push("/dashboard")
       }
@@ -80,6 +83,7 @@ export default function LoginPage() {
             <p className="text-sm font-medium mb-2">Demo Credentials:</p>
             <p className="text-xs">Admin: admin@company.com / admin123</p>
             <p className="text-xs">User: john@company.com / user123</p>
+            <p className="text-xs">Finance: finance@company.com / finance123</p>
           </div>
         </CardContent>
       </Card>
