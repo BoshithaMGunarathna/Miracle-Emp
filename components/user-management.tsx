@@ -12,9 +12,9 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 // Simulated user data with leave balances
 const initialUsers = [
   {
-    id: 2,
-    name: "John Doe",
-    email: "john@company.com",
+    id: 1,
+    name: "Pasan Dulashith",
+    email: "pasan@company.com",
     role: "user",
     leaveBalance: {
       "Sick Leave": { used: 3, total: 10 },
@@ -23,9 +23,9 @@ const initialUsers = [
     },
   },
   {
-    id: 3,
-    name: "Jane Smith",
-    email: "jane@company.com",
+    id: 2,
+    name: "Boshitha Gunarathna",
+    email: "boshitha@company.com",
     role: "user",
     leaveBalance: {
       "Sick Leave": { used: 1, total: 10 },
@@ -34,9 +34,9 @@ const initialUsers = [
     },
   },
   {
-    id: 4,
-    name: "Mike Johnson",
-    email: "mike@company.com",
+    id: 3,
+    name: "Dulan Siriwardana",
+    email: "dulan@company.com",
     role: "user",
     leaveBalance: {
       "Sick Leave": { used: 5, total: 10 },
@@ -44,7 +44,8 @@ const initialUsers = [
       "Personal Leave": { used: 3, total: 5 },
     },
   },
-]
+];
+
 
 export default function UserManagement() {
   const [users, setUsers] = useState(initialUsers)
