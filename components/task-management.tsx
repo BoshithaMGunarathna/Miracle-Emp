@@ -29,6 +29,7 @@ const employees = [
   { id: 2, name: "John Doe" },
   { id: 3, name: "Jane Smith" },
   { id: 4, name: "Mike Johnson" },
+  { id: 5, name: "Finance Manager" },
 ]
 
 const initialTasks = [
@@ -51,6 +52,17 @@ const initialTasks = [
     assignedToName: "Jane Smith",
     startDate: "2024-01-20",
     deadline: "2024-01-25",
+    status: "pending",
+    comments: [],
+  },
+  {
+    id: 3,
+    title: "Process Payroll",
+    description: "Process monthly payroll for all employees",
+    assignedTo: 5,
+    assignedToName: "Finance Manager",
+    startDate: "2024-01-25",
+    deadline: "2024-01-31",
     status: "pending",
     comments: [],
   },
