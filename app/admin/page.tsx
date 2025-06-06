@@ -66,10 +66,10 @@ export default function AdminDashboard() {
           </div>
         </div>
       </header>
+  <DateTimeDisplay />
 
       <main className="p-6">
-        <DateTimeDisplay />
-
+      
         <div className="mt-6 mb-6">
           <h2 className="text-2xl font-bold mb-4">Admin Overview</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
