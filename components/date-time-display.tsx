@@ -63,11 +63,13 @@ export default function DateTimeDisplay() {
   }
 
   return (
-    <div className={`relative p-6 rounded-xl overflow-hidden ${theme === 'dark' ? 'bg-gray-800' : 'bg-gradient-to-r from-blue-100 to-indigo-100'}`}>
+    <div className={`relative p-6 rounded-xl overflow-hidden ${theme === 'dark' ? 'bg-gray-800' : 'bg-gradient-to-r from-primaryStart to-primaryEnd'}`}>
+
+      
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute bottom-0 left-0 right-0 h-1 bg-blue-400 opacity-20"
+          className="absolute bottom-0 left-0 right-0 h-1 bg-color2 "
           animate={{
             width: `${getDayProgress()}%`,
           }}
@@ -89,7 +91,7 @@ export default function DateTimeDisplay() {
             </motion.div>
             <div>
               <motion.p 
-                className="text-sm font-medium text-gray-500"
+                className="text-sm font-medium text-white"
                 initial={{ opacity: 0, y: -5 }}
                 animate={{ opacity: 1, y: 0 }}
                 key={`date-${currentDateTime.getDate()}`}
@@ -97,7 +99,7 @@ export default function DateTimeDisplay() {
                 {formatDate(currentDateTime)}
               </motion.p>
               <motion.h2 
-                className="text-2xl font-bold text-gray-800 dark:text-white"
+                className="text-2xl font-bold text-white dark:text-white"
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 key={`time-${currentDateTime.getSeconds()}`}
@@ -114,14 +116,14 @@ export default function DateTimeDisplay() {
               ) : (
                 <Moon className="h-5 w-5 text-indigo-300" />
               )}
-              <span className="font-medium text-gray-700 dark:text-gray-300">
+              <span className="font-medium text-white dark:text-gray-300">
                 {timeOfDay === "day" ? "Daytime" : "Nighttime"}
               </span>
             </div>
 
             <div className="flex items-center gap-2">
               {weatherIcons[weather]}
-              <span className="font-medium text-gray-700 dark:text-gray-300 capitalize">
+              <span className="font-medium text-white dark:text-gray-300 capitalize">
                 {weather}
               </span>
             </div>
@@ -129,7 +131,7 @@ export default function DateTimeDisplay() {
         </div>
 
         {/* Additional time info */}
-        <div className="mt-6 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+        <div className="mt-6 flex items-center justify-between text-sm text-white dark:text-gray-400">
           <div>
             <span>Day progress: {Math.round(getDayProgress())}%</span>
           </div>
