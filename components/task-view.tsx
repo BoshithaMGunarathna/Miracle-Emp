@@ -18,39 +18,57 @@ const allTasks = [
     id: 1,
     title: "Update Employee Database",
     description: "Migrate employee records to new system",
-    assignedTo: 2,
-    assignedToName: "John Doe",
+    assignedTo: 1,
+    assignedToName: "Pasan Dulashith",
     startDate: "2024-01-15",
     deadline: "2024-01-30",
     status: "in-progress",
     comments: [
-      { id: 1, author: "Admin", text: "Please prioritize this task", date: "2024-01-16" },
-      { id: 2, author: "John Doe", text: "Working on it, will complete by deadline", date: "2024-01-17" },
-    ],
+      {
+        id: 1,
+        author: "Admin",
+        text: "Please prioritize this task",
+        date: "2024-01-16"
+      },
+      {
+        id: 2,
+        author: "Pasan Dulashith",
+        text: "Working on it, will complete by deadline",
+        date: "2024-01-17"
+      }
+    ]
   },
   {
     id: 2,
     title: "Prepare Monthly Report",
     description: "Generate and review monthly performance report",
-    assignedTo: 3,
-    assignedToName: "Jane Smith",
+    assignedTo: 2,
+    assignedToName: "Boshitha Gunarathna",
     startDate: "2024-01-20",
     deadline: "2024-01-25",
     status: "pending",
-    comments: [],
+    comments: []
   },
   {
     id: 3,
     title: "System Maintenance",
     description: "Perform routine system maintenance and updates",
-    assignedTo: 2,
-    assignedToName: "John Doe",
+    assignedTo: 1,
+    assignedToName: "Pasan Dulashith",
     startDate: "2024-01-10",
     deadline: "2024-01-15",
     status: "completed",
-    comments: [{ id: 3, author: "John Doe", text: "Maintenance completed successfully", date: "2024-01-14" }],
-  },
-]
+    comments: [
+      {
+        id: 3,
+        author: "Pasan Dulashith",
+        text: "Maintenance completed successfully",
+        date: "2024-01-14"
+      }
+    ]
+  }
+];
+
 
 interface TaskViewProps {
   userRole: "admin" | "user"
