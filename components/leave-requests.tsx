@@ -9,11 +9,13 @@ import SortFilterControls from "./sort-filter-controls"
 import { sortData, filterData } from "@/utils/date-utils"
 
 // Simulated leave requests data
+
+
 const leaveRequests = [
   {
     id: 1,
-    employeeName: "John Doe",
-    employeeId: 2,
+    employeeName: "Pasan Dulashith",
+    employeeId: 1,
     type: "Sick Leave",
     startDate: "2024-01-20",
     endDate: "2024-01-22",
@@ -24,8 +26,8 @@ const leaveRequests = [
   },
   {
     id: 2,
-    employeeName: "Jane Smith",
-    employeeId: 3,
+    employeeName: "Boshitha Gunarathna",
+    employeeId: 2,
     type: "Vacation",
     startDate: "2024-02-15",
     endDate: "2024-02-20",
@@ -36,8 +38,8 @@ const leaveRequests = [
   },
   {
     id: 3,
-    employeeName: "Mike Johnson",
-    employeeId: 4,
+    employeeName: "Dulan Siriwardana",
+    employeeId: 3,
     type: "Personal Leave",
     startDate: "2024-01-25",
     endDate: "2024-01-25",
@@ -46,7 +48,32 @@ const leaveRequests = [
     status: "approved",
     appliedDate: "2024-01-20",
   },
-]
+  {
+    id: 4,
+    employeeName: "Amalka Heshini",
+    employeeId: 4,
+    type: "Vacation",
+    startDate: "2024-03-10",
+    endDate: "2024-03-15",
+    days: 6,
+    reason: "Annual vacation",
+    status: "pending",
+    appliedDate: "2024-02-25",
+  },
+  {
+    id: 5,
+    employeeName: "Meleena Meleena",
+    employeeId: 5,
+    type: "Sick Leave",
+    startDate: "2024-04-05",
+    endDate: "2024-04-06",
+    days: 2,
+    reason: "Migraine",
+    status: "pending",
+    appliedDate: "2024-04-04",
+  },
+];
+
 
 export default function LeaveRequests() {
   const [requests, setRequests] = useState(leaveRequests)
